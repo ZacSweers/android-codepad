@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello"></string>
+    <string name="app_name">Android CodePad</string>
+    <string name="up_one_level">..</string> 
+    <string name="current_dir">.</string> 
+</resources>

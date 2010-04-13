@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:id="@+id/open_menu" android:title="Open" android:icon="@android:drawable/ic_menu_search">
+</item>
+<item android:id="@+id/search_menu" android:title="Search" android:icon="@android:drawable/ic_menu_view"> 
+</item>
+<item android:id="@+id/select_menu" android:title="Select" android:icon="@android:drawable/ic_menu_edit"> 
+</item>
+<item android:id="@+id/next_menu" android:title="Next Match" android:enabled="false" android:icon="@android:drawable/ic_media_next"> 
+</item>
+<item android:id="@+id/clear_menu" android:title="Clear Search" android:enabled="false" android:icon="@android:drawable/ic_menu_close_clear_cancel"> 
+</item>
+<item android:id="@+id/options_menu" android:title="Options" android:enabled="true" android:icon="@android:drawable/ic_menu_more">
+	<menu>
+		<item android:id="@+id/home_menu" android:title="Home" android:enabled="true">
+		</item>
+		<item android:id="@+id/help_menu" android:title="Help" android:enabled="true">
+		</item>				
+		<item android:id="@+id/quit_menu" android:title="Quit" android:enabled="true">
+		</item>
+
+	</menu> 
+</item>
+</menu>

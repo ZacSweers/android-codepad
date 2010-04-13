@@ -1,0 +1,84 @@
+<html>
+	<head>
+		<title>Android CodePad</title>
+		<style type="text/css">
+			h1 { text-align:center; text-shadow: #BBB 1px 1px 1px; color: black !important; font-family:  "Gill Sans", "Lucida Grande", Helvetica, sans-serif;  }
+			body { font-family:Arial, Helvetica, sans-serif; font-size:12px; background: -webkit-gradient(linear,left top,left bottom,color-stop(0.04, rgb(240,240,240)), color-stop(0.52, rgb(255,255,255)))}
+			.important_text { text-align:left; text-shadow: #BBB 1px 1px 1px; color: black !important; font-weight:bold; }
+			.regular_text { text-align:left; color: black; }
+			.code_style { font-size: 9px; text-align:left; }
+			#content_div { }
+		</style>
+        <link href="file:///android_asset/prettify.css" rel="stylesheet" type="text/css" />
+        <script src="file:///android_asset/prettify.js" type="text/javascript"></script>	
+	</head>
+	<body onload="prettyPrint()">
+		<div id="content_div">
+			
+			<h1>Android CodePad</h1>
+			<span>
+				<span class="important_text">Welcome to Android CodePad.</span><br />
+				<span class="regular_text">
+					Android CodePad is a simple source code viewer that supports syntax highlighting.
+					it supports all C-like, Bash-like, and XML-like languages. it automatically selects the syntax depending on the file.
+					<br /><br>
+					Android CodePad uses <b style="color: blue;">WebKit</b> and <b>google-code-prettify</b> to do the syntax highlighting.
+				</span>
+				<br /><br />
+				<span class="important_text">Here's some examples:.</span><br /><br />
+				<span class="regular_text">Java</span><br />
+				<div class="code_style">
+					<pre class="prettyprint">
+class HelloWorldApp { 
+	public static void main(String[] args) {
+		System.out.println("Hello World!");
+	} 
+}
+					</pre>
+				</div>
+				<br />
+				<span class="regular_text">C++</span><br>
+				<div class="code_style">
+					<pre class="prettyprint">
+// My C++ Comment
+
+#include &lt;iostream&gt;
+using namespace std;
+int main ()
+{
+  cout &lt;&lt; "Hello World!";
+  return 0;
+}
+					</pre>		
+				</div>
+				<span class="regular_text">Python</span>
+				<div class="code_style">
+					<pre class="prettyprint">
+#!/usr/local/bin/python
+
+import string, sys
+
+# If no arguments were given, print a helpful message
+if len(sys.argv)==1:<br>
+    print 'Usage: celsius temp1 temp2 ...'
+    sys.exit(0)
+	
+# Loop over the arguments
+for i in sys.argv[1:]:
+    try: 
+        fahrenheit=float(string.atoi(i))
+    except string.atoi_error:
+	print repr(i), "not a numeric value"
+    else:
+	celsius=(fahrenheit-32)*5.0/9.0
+	print '%i\260F = %i\260C' % (int(fahrenheit), int(celsius+.5))				
+					</pre>
+				</div>
+				
+									
+			</span>
+			<br /><br />
+			<span class="important_text">Open a file to get started.</span><br />
+		</div>
+	</body>
+</html>
