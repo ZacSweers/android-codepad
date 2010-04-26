@@ -79,22 +79,23 @@ public class FileBrowser extends ListActivity {
 
 		if (this.currentDirectory.getParent() != null)
 			this.directoryEntries.add("..");
-
-		switch (this.displayMode) {
-		case ABSOLUTE:
-			for (File file : files) {
-				this.directoryEntries.add(file.getPath());
+		if (files != null) {
+			switch (this.displayMode) {
+				case ABSOLUTE:
+					for (File file : files) {
+						this.directoryEntries.add(file.getPath());
+					}
+					break;
+				case RELATIVE: // On relative Mode, we have to add the current-path to
+								// the beginning
+					int currentPathStringLenght = this.currentDirectory
+							.getAbsolutePath().length();
+					for (File file : files) {
+						this.directoryEntries.add(file.getAbsolutePath().substring(
+								currentPathStringLenght));
+					}
+					break;
 			}
-			break;
-		case RELATIVE: // On relative Mode, we have to add the current-path to
-						// the beginning
-			int currentPathStringLenght = this.currentDirectory
-					.getAbsolutePath().length();
-			for (File file : files) {
-				this.directoryEntries.add(file.getAbsolutePath().substring(
-						currentPathStringLenght));
-			}
-			break;
 		}
 
 		ArrayAdapter<String> directoryList = new ArrayAdapter<String>(this,
