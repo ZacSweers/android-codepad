@@ -49,8 +49,7 @@ public class FileBrowser extends ListActivity {
 	 * currentDirectory
 	 */
 	private void upOneLevel() {
-		if (this.currentDirectory.getParent() != null)
-			this.browseTo(this.currentDirectory.getParentFile());
+		if (this.currentDirectory.getParent() != null) this.browseTo(this.currentDirectory.getParentFile());
 	}
 
 	private void browseTo(final File aDirectory) {
